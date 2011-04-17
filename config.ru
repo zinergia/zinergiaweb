@@ -1,4 +1,9 @@
-# This file is used by Rack-based servers to start the application.
+# config.ru
 
-require ::File.expand_path('../config/environment',  __FILE__)
-run Zinergiaweb::Application
+path = File.expand_path "../", __FILE__
+
+require 'rubygems'
+require 'sinatra'
+require "#{path}/zinweb"
+
+run Sinatra::Application
