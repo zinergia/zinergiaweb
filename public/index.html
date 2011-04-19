@@ -5,28 +5,44 @@
     <title>Zinergia.co</title>    
     <style type="text/css" media="screen">
       body {
-      text-align: center;
       background-color: #f0f0f0;
       font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
       font-size: 13px;
       color: #333;
       }
       
-      .logo {
-          width: 50px; height: 57px; display: block; margin:auto;
-          background: transparent url(/images/z.png) top left no-repeat;  
+      #site {
+      width:490px; min-height:650px;
+      margin:auto;
+      text-align:center;
+
+
+
+      }
+      
+      .img-z {
+      width: 75px; height: 85.5px; display: block; margin:auto;
+      background: transparent url(/images/z.png) top no-repeat;
+
+
+
       }
       
       h1{
       font-size: 28px;
       color: #3D7F28;
       }
+
       h2{
-      color: #82AC60;
+      color: #444;
+      font-size: 28px;
       }
+
       h3{
-      color: #3D7F28;
+      color: #444;
+      font-size: 18px;
       }
+
       a { color: #3D7F28 }
       a:hover {
       background-color: #82AC60;
@@ -38,13 +54,25 @@
   </head>
   
   <body>
-  <div class="logo"></div>
-   <h3> Zinergia.co </h3>
-   <p> Awesome web ;)</p>
-   <h2>About us:</h2>
-   <p> We create web apps and iOS Apps.</p>
-   <h2>Contact us:</h2>
-   <p> Have something to say? <a href='mailto:hello@zinergia.co'>Say Hello! </a> </p>
+    <div id="site">
+      
+      <div id="logo">
+        <div class="img-z"> </div>
+        <h3> Zinergia</h3>
+        <p> Awesome web ;)</p>
+      </div>
+      
+      <div id="about-us">
+        <h2>About us</h2>
+        <p> </p>
+      </div>
+      
+      <div id="contact-us">
+        <h2>Contact</h2>        
+        <p> Have something to say? <a href='mailto:hello@zinergia.co'>Say Hello! </a> </p>
+      </div>
+      
+    </div>
+    
   </body>
-
 </html>
