@@ -4,7 +4,7 @@ require 'erb'
 set :views, File.dirname(__FILE__) + '/views'
 
 get "/" do
-  File.read(File.join('public', 'index.html'))
+  erb :index
 end
 TEAM = ['sebastian', 'sergio', 'alejandro', 'juan', 'felipe', 'nicolas']
 get "/team/:name" do
