@@ -1,3 +1,16 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://github.com/alindeman/github-timeline-widget/raw/stable/github-timeline-widget.js"></script>
+<script type="text/javascript">
+$(function() {
+  var options = {
+    'username': 'sarcilav',
+    'limit': 10,
+    'user_id': false // set to false to exclude (user #)
+  };
+  $("#github-timeline-widget").githubTimelineWidget(options);
+});
+</script>
+
 <style type="text/css" media="screen">
   #content{
   align:left;
@@ -11,5 +24,7 @@
 <h3>Ruby enthusiastic, Nerd, Algorithms and Pizza lover :)</h3>
 <p>
   I love to try new things like Bungee jumping and Hang gliding, also I like to play soccer and volleyball, watch soccer games with my friends. And when I'm not playing, I like to use my time to train me or compete on Google Code Jam, TopCoder and ICPC.       
-  </p>
+</p>
+<div id="github-timeline-widget"></div>
 </div>
+
