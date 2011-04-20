@@ -12,35 +12,33 @@
       }
       
       #site {
-      width:490px; min-height:650px;
+      width:600px; min-height:650px;
       margin:auto;
       text-align:center;
-
-
-
       }
       
       .img-z {
-      width: 75px; height: 85.5px; display: block; margin:auto;
+      width: 75px; height: 60px; display: block; margin:auto;
       background: transparent url(/images/z.png) top no-repeat;
-
-
-
       }
       
       h1{
-      font-size: 28px;
+      font-size: 58px;
       color: #3D7F28;
+      margin:0;
       }
 
       h2{
       color: #444;
       font-size: 28px;
+      margin:0;
+      margin-top:20px;
       }
 
       h3{
       color: #444;
       font-size: 18px;
+      margin:0;
       }
 
       a { color: #3D7F28 }
@@ -58,11 +56,13 @@
       
       <div id="logo">
         <div class="img-z"> </div>
-        <h3> Zinergia</h3>
+        <h1> Zinergia</h1>
         <p> Awesome web ;)</p>
       </div>
       <%= yield %>
     </div>
-    
+    <div id="footer">
+      <a href="/twitter"> Timeline Twitter </a>
+    </div>
   </body>
 </html>
