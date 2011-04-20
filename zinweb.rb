@@ -11,6 +11,10 @@ get "/twitter" do
   erb :twitter
 end
 
+get '/qrcard' do
+    erb :qrcard
+end
+
 post '/contact' do
   name = params[:name]
   mail = params[:mail]
