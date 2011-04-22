@@ -1,5 +1,6 @@
 # zinweb.rb
 require 'erb'
+require 'mail'
 require 'pony'
 
 set :views, File.dirname(__FILE__) + '/views'
@@ -15,11 +16,12 @@ get '/qrcard' do
     erb :qrcard
 end
 
-post '/contact' do
+post '/inq' do
   name = params[:name]
   mail = params[:mail]
   body = params[:body]
-  Pony.mail(:to => 'hello@zinergia.co', :from => "#{mail}", :subject => "#{name} says Hi!", :body => "#{body}")
+  Pony.mail :to => 'sergio@zinergia.co', :from => "#{mail}", :subject => "#{name} says Hi!", :body => "#{body}"
+  puts "#{name} from #{mail} said #{body}"
 end
 
 TEAM = ['sebastian', 'sergio', 'alejandro', 'juan', 'felipe', 'nicolas']
