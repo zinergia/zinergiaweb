@@ -8,11 +8,11 @@ set :views, File.dirname(__FILE__) + '/views'
 get "/" do
   erb :index
 end
-get "/twitter" do
+get "/twitter/?" do
   erb :twitter
 end
 
-get '/qrcard' do
+get '/qrcard/?' do
     erb :qrcard
 end
 
@@ -24,7 +24,8 @@ post '/inq' do
   puts "#{name} from #{mail} said #{body}"
 end
 
-TEAM = ['sebastian', 'sergio', 'alejandro', 'juan', 'felipe', 'nicolas']
+TEAM = %w(sebastian sergio alejandro juan felipe nicolas)
+
 get "/team/:name" do
   name = params[:name]
   if TEAM.include? name
