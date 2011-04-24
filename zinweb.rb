@@ -16,6 +16,10 @@ get '/qrcard/?' do
     erb :qrcard
 end
 
+get '/thanks' do
+  erb :thanks
+end
+
 post '/inq' do
   name = params[:name]
   mail = params[:mail]
@@ -31,9 +35,15 @@ post '/inq' do
     :domain         => ENV['SENDGRID_DOMAIN']
   }
   
-  Pony.mail(:to => 'hello@zinergia.co', :via => :smtp, :via_options => smtp_settings)  
-  # Pony.mail :to => 'nhock@zinergia.co', :from => "#{mail}", :subject => "#{name} says Hi!", :body => "#{body}"
+  Pony.mail(
+      :to => 'hello@zinergia.co',
+      :from => "#{name} <#{mail}>",
+      :subject => "#{name} says Hi!",
+      :body => "#{body}",
+      :via => :smtp, :via_options => smtp_settings
+    )
   puts "#{name} from #{mail} said #{body}"
+  redirect '/thanks', 302
 end
 
 TEAM = %w(sebastian sergio alejandro juan felipe nicolas)
