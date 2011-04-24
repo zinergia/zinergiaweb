@@ -20,7 +20,19 @@ post '/inq' do
   name = params[:name]
   mail = params[:mail]
   body = params[:body]
-  Pony.mail :to => 'sergio@zinergia.co', :from => "#{mail}", :subject => "#{name} says Hi!", :body => "#{body}"
+  
+  
+   = {
+    :address        => "smtp.sendgrid.net",
+    :port           => "25",
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => ENV['SENDGRID_DOMAIN']
+  }
+  
+  Pony.mail(:to => 'hello@zinergia.co', :via => :smtp, :via_options => smtp_settings)  
+  # Pony.mail :to => 'nhock@zinergia.co', :from => "#{mail}", :subject => "#{name} says Hi!", :body => "#{body}"
   puts "#{name} from #{mail} said #{body}"
 end
 

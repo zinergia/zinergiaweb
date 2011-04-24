@@ -24,5 +24,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  mail
   pony (>= 1.1)
   sinatra (>= 1.2)
