@@ -22,7 +22,7 @@ post '/inq' do
   body = params[:body]
   
   
-   = {
+  smtp_settings = {
     :address        => "smtp.sendgrid.net",
     :port           => "25",
     :authentication => :plain,
