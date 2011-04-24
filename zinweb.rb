@@ -20,7 +20,7 @@ get '/thanks/?' do
   erb :thanks
 end
 
-post '/inq/?  ' do
+post '/inq/?' do
   name = params[:name]
   mail = params[:mail]
   body = params[:body]
