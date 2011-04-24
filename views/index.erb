@@ -17,22 +17,20 @@ So far we have successfully completed projects with companies of genetics and fr
   <form method="post" action="/inq" accept-charset="UTF-8">
     
     <dl>
-      <dt class="required">Name</dt>
+      <dt class="required">Name <span class="small gray">(required)</span></dt>
       <dd>
         <input type="text" value="" size="30" name="name" id="name" class="required">
-        <span class="small gray">(required)</span>
       </dd>
 
-      <dt class="required">email</dt>
+      <dt class="required">E-mail <span class="small gray">(required)</span></dt>
       <dd>
         <input type="text" value="" size="30" name="mail" id="mail" class="required">
-        <span class="small gray">(required)</span>
       </dd>
 
-      <dt class="required">Let's talk</dt>
+      <dt class="required">Let's Talk <span class="small gray">(required)</span></dt>
       <dd>
-        <input type="text" value="" size="30" name="body" id="body" class="required">
-        <span class="small gray">(required)</span>
+        <textarea cols="30" rows="10" id="body" name="body">
+        </textarea>
       </dd>
            
       <div class="clear"> </div>
